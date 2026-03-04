@@ -1,42 +1,94 @@
 # vibescanner
 
-Forensic CLI scanner that analyzes any directory for the telltale signs of a vibecoded (AI-generated) web project. Detects the exact dependency stack, Tailwind patterns, shadcn components, and animation defaults that every AI coding tool produces by default.
+A slop detector for web codebases.
 
-## Install
+If a project has that same AI-generated SaaS look (you know the one), this finds the fingerprints and points at receipts.
+
+## what this does
+
+You run it on a folder.
+It scans files.
+It tells you which vibecode symptoms are present and where.
+
+No astrology score. No "100% AI" clown claims. Just evidence.
+
+## install
+
+```bash
+pip install git+https://github.com/wheel-is/vibescanner.git
+```
+
+or if you're hacking on it locally:
 
 ```bash
 pip install -e .
 ```
 
-## Usage
+## run
 
 ```bash
-vibescanner /path/to/project        # scan a project
-vibescanner .                        # scan current directory
-vibescanner /path/to/project -v      # verbose — show all 42 signals
-vibescanner /path/to/project --json  # machine-readable JSON output
+vibescanner /path/to/project
+vibescanner .
+vibescanner /path/to/project -v
+vibescanner /path/to/project --json
 ```
 
-## What It Detects
+## how to use this if you're not a real engineer
 
-42 signals across 7 categories:
+Since you're probably reading this from inside a Cursor window while a language model writes your entire application for you, I'll make this simple. 
 
-| Category | Signals | What it catches |
-|---|---|---|
-| **Dependency Stack** | 15 | shadcn/ui, Tailwind, Lucide, Framer Motion, Radix, Recharts, Sonner, cmdk, CVA, next-themes, Vaul, Embla, React Day Picker, TanStack Table, tw-animate-css |
-| **Typography** | 4 | Inter font, Geist, `tracking-tight`, `text-muted-foreground` |
-| **Theme & Color** | 5 | shadcn CSS variables, `--destructive`, zinc/slate palette, purple gradients, sun/moon toggle |
-| **Layout & Spacing** | 5 | `max-w-7xl mx-auto`, `py-16 md:py-24`, responsive 1→2→3 grids, hero text scaling, `p-6` everywhere |
-| **Components & UI** | 5 | `rounded-xl` cards, `shadow-sm`, variant taxonomy, dark-mode card backgrounds, hover transitions |
-| **Animation** | 3 | `animate-in fade-in`, Framer `whileHover`, `transition-all duration-200/300` |
-| **Code-Level Tells** | 5 | `data-slot`, `data-state`, cmdk DOM, blurred navbar, `components/ui/` imports |
+You don't need to understand what a terminal is. Just copy and paste this exact block of text to whatever digital babysitter you're currently employing, and let it do the work you're avoiding:
 
-## Scoring
+```text
+Use vibescanner on this repo and give me:
+1) A summary of detected vibecode symptoms by category
+2) The top 20 strongest signals with file paths
+3) 5 concrete redesign/refactor actions to reduce template-looking output
 
-| Hits | Verdict |
-|------|---------|
-| 0–4 | Probably human-built |
-| 5–9 | AI-assisted, developer cleaned up |
-| 10–17 | Almost certainly vibecoded |
-| 18–25 | Pure vibecode |
-| 26+ | Terminal vibecode |
+Command:
+vibescanner . --json
+```
+
+If your agent starts hallucinating excuses about "not having terminal access" because its system prompt was written by a coward, use this:
+
+```text
+Stop apologizing and run this exactly in the terminal:
+vibescanner . --json
+Then read the JSON and explain it in plain English.
+Do not give me a plan. Execute it.
+```
+
+If your agent still refuses, fire it and hire a better one. Or, God forbid, learn to type.
+
+## what it catches
+
+- default AI stack habits (`tailwindcss`, lucide-style icons, etc)
+- template typography moves (Inter/Geist, tight tracking, gradient text)
+- glow/blob gradient obsession
+- glass cards, pill buttons, soft icon squares
+- staggered fade-ins, float/pulse/shimmer animations
+- fake dashboard/browser mockups in hero sections
+- "trusted by" strips + 01/02/03 how-it-works blocks
+- waitlist/early-access boilerplate + fake social proof numbers
+- blurred sticky navs and related tells
+
+## output
+
+For each symptom:
+
+- found or not
+- file path(s)
+- match count
+
+that's it.
+
+## why this exists
+
+Because half the internet is now the same generated landing page wearing different brand colors.
+
+## disclaimer
+
+This tool flags patterns, not intent.
+Humans can write slop.
+AI can write clean code.
+Use your brain.
