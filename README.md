@@ -1,6 +1,8 @@
 # vibescanner
 
-https://github.com/user-attachments/assets/574eb363-d144-4696-9304-7a91792b02a2
+
+https://github.com/user-attachments/assets/415ef4b2-37e4-45fc-91e7-a7d19f49b4b2
+
 
 A slop detector for web codebases.
 
