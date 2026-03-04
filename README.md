@@ -1,5 +1,7 @@
 # vibescanner
 
+https://github.com/user-attachments/assets/574eb363-d144-4696-9304-7a91792b02a2
+
 A slop detector for web codebases.
 
 If a project has that same AI-generated SaaS look (you know the one), this finds the fingerprints and points at receipts.
