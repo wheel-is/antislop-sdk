@@ -1,4 +1,4 @@
-# vibescanner
+# antislop
 
 
 https://github.com/user-attachments/assets/415ef4b2-37e4-45fc-91e7-a7d19f49b4b2
@@ -19,7 +19,7 @@ No astrology score. No "100% AI" clown claims. Just evidence.
 ## install
 
 ```bash
-pip install git+https://github.com/wheel-is/vibescanner.git
+pip install git+https://github.com/wheel-is/antislop-sdk.git
 ```
 
 or if you're hacking on it locally:
@@ -31,10 +31,10 @@ pip install -e .
 ## run
 
 ```bash
-vibescanner /path/to/project
-vibescanner .
-vibescanner /path/to/project -v
-vibescanner /path/to/project --json
+antislop /path/to/project
+antislop .
+antislop /path/to/project -v
+antislop /path/to/project --json
 ```
 
 ## how to use this 
@@ -44,20 +44,20 @@ Since you're reading this from inside a Cursor window while a language model wri
 You don't need to understand what a terminal is. Just copy and paste this exact block of text to whatever digital babysitter you're currently employing, and let it do the work you're avoiding:
 
 ```text
-Use vibescanner on this repo and give me:
+Use antislop on this repo and give me:
 1) A summary of detected vibecode symptoms by category
 2) The top 20 strongest signals with file paths
 3) 5 concrete redesign/refactor actions to reduce template-looking output
 
 Command:
-vibescanner . --json
+antislop . --json
 ```
 
 If your agent starts hallucinating excuses about "not having terminal access" because its system prompt was written by a coward, use this:
 
 ```text
 Stop apologizing and run this exactly in the terminal:
-vibescanner . --json
+antislop . --json
 Then read the JSON and explain it in plain English.
 Do not give me a plan. Execute it.
 ```

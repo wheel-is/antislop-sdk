@@ -1,4 +1,4 @@
-"""CLI entry point — installed as `vibescanner` command."""
+"""CLI entry point — installed as `antislop` command."""
 
 from __future__ import annotations
 

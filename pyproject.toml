@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vibescanner"
+name = "antislop"
 version = "0.1.0"
 description = "Forensic CLI scanner that detects AI-generated (vibecoded) web projects"
 readme = "README.md"
@@ -24,8 +24,8 @@ dependencies = [
 ]
 
 [project.scripts]
-vibescanner = "vibescanner.cli:main"
+antislop = "antislop.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/wheel-is/vibescanner"
-Issues = "https://github.com/wheel-is/vibescanner/issues"
+Homepage = "https://github.com/wheel-is/antislop-sdk"
+Issues = "https://github.com/wheel-is/antislop-sdk/issues"
